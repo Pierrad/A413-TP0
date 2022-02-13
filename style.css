@@ -1,0 +1,267 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, input, button {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex: 2 1 auto;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+}
+
+.leftCenter {
+  transform: translateX(70%);
+}
+
+.leftNotCentered {
+  transform: translateX(20%);
+}
+
+.left_image {
+  width: 20rem;
+  height: auto;
+}
+
+.left_launcher {
+  max-width: 20rem;
+}
+
+.right {
+  background-color: #F8F8FB;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  transition: transform 1s ease-in-out;
+  position: relative;
+}
+
+.rightHidden {
+  transform: translateX(90%);
+}
+
+.rightVisible {
+  transform: translateX(0%);
+}
+
+.right_chevron {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateX(50%);
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.right_chevron_left {
+  transform: rotate(180deg);
+}
+
+.right_chevron_right {
+  transform: rotate(0deg);
+}
+
+.right_wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.right_logo {
+  width: 2rem;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.right_inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  border: 1px solid #E9EBFF;
+  border-radius: 1.2rem;
+  padding: 1.3rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.true {
+  border: 1px solid #00FF00;
+}
+
+.false {
+  border: 1px solid #ff3333;
+}
+
+button {
+  margin-top: 2rem;
+  background: #0116CB;
+  border: 1px solid #0116CB;
+  border-radius: 12px;
+  padding: 1.1rem 0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+    background: #0116F4;
+}
+
+button:disabled,
+button[disabled] {
+  background: #bbbbbb;
+  border: 1px solid #bbbbbb;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+svg {
+  animation: 2s linear infinite svg-animation;
+  width: 1.3rem;
+  height: auto;
+}
+
+@keyframes svg-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
+
+circle {
+  animation: 1.4s ease-in-out infinite both circle-animation;
+  display: block;
+  fill: transparent;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  stroke-width: 10px;
+  transform-origin: 50% 50%;
+}
+
+@keyframes circle-animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    border-top-right-radius: 5rem;
+    padding: 3rem 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .leftCenter {
+    transform: translateX(20%);
+  }
+
+  .leftNotCentered {
+    transform: translateX(20%);
+  }
+
+  .rightHidden {
+    transform: translateY(65%);
+  }
+
+  .rightVisible {
+      transform: translateY(0%);
+  }
+
+  .right_chevron {
+    width: 2rem;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transition: transform 1s ease-in-out;
+  }
+
+  .right_chevron_left {
+    transform: rotate(-90deg);
+  }
+
+  .right_chevron_right {
+    transform: rotate(90deg);
+  }
+}

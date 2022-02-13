@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Basic form page</title>
+  <meta name="description" content="A simple form page">
+  <meta name="author" content="Vasseur Pierre-Adrien">
+
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="left leftCenter" id="left">
+        <img class="left_image" src="./assets/spaceship.svg" alt="spaceship image" />
+        <button class="left_launcher" id="launcher">Launch to space?</button>
+      </div>
+      <div class="right rightHidden" id="right">
+        <img class="right_chevron right_chevron_left" id="rightChevron" src="./assets/chevron.svg" alt="clickable chevron" />
+        <div class="right_wrapper">
+          <div class="right_head">
+            <h2>A basic form in HTML, CSS, JS</h2>
+            <img class="right_logo" src="./assets/logo.svg" alt="logo image" />
+          </div>
+          <div class="right_inputs">
+            <input type="email" id="mail" name="mail" placeholder="Email" required />
+            <input type="text" id="firstname" name="firstname" placeholder="First name" required />
+            <input type="text" id="lastname" name="lastname" placeholder="Last name" required />
+            <button id="submit">
+              <p id="buttonText">Send</p>
+              <svg id="spinner" class="hidden" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
