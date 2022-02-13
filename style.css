@@ -57,7 +57,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, input, button {
 }
 
 .left_launcher {
-  max-width: 20rem;
+  width: 20rem;
 }
 
 .right {
@@ -228,20 +228,25 @@ circle {
 
   .right {
     border-top-right-radius: 5rem;
-    padding: 3rem 0;
+    padding: 3rem 1.5rem;
     border-bottom-left-radius: 0;
   }
 
+  .left {
+    align-items: center;
+    margin-top: 1rem;
+  }
+
   .leftCenter {
-    transform: translateX(20%);
+    transform: translateX(0%);
   }
 
   .leftNotCentered {
-    transform: translateX(20%);
+    transform: translateX(0%);
   }
 
   .rightHidden {
-    transform: translateY(65%);
+    transform: translateY(80%);
   }
 
   .rightVisible {
@@ -249,12 +254,8 @@ circle {
   }
 
   .right_chevron {
-    width: 2rem;
-    height: auto;
-    position: absolute;
     top: 2%;
-    left: 50%;
-    transition: transform 1s ease-in-out;
+    left: 48%;
   }
 
   .right_chevron_left {
